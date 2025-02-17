@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "flowbite";
+
+@font-face {
+  font-family: "Arial-rounded-bold";
+  src: url("../fonts/arial-rounded/arlrdbd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial-rounded-regular";
+  src: url("../fonts/arial-rounded/Arial Rounded MT Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Switzer Regular";
+  src: url("../fonts/switzer/Switzer-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Switzer Semibold";
+  src: url("../fonts/switzer/Switzer-Semibold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Arial-rounded-regular"; */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar,
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Customize the scrollbar width and background */
+::-webkit-scrollbar {
+  scrollbar-width: thin;
+  background-color: #f0f0f0; /* Background color of the scrollbar */
+}
+
+/* Style the scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Track background color */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners */
+  border: 2px solid #f0f0f0; /* Optional border for spacing */
+}
+
+/* Add hover effect to the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555ba; /* Darker color on hover */
+}
+
+/* Optional: Style the scrollbar corner if needed */
+::-webkit-scrollbar-corner {
+  background-color: #f0f0f0;
+}
+
+.font-arial-rounded-bold {
+  font-family: "Arial-rounded-bold";
+}
+.font-arial-rounded-regular {
+  font-family: "Arial-rounded-regular";
+}
+.font-switzer-regular {
+  font-family: "Switzer Regular";
+}
+.font-switzer-semibold {
+  font-family: "Switzer Semibold";
+}
+
+.bullet-list ul {
+  list-style-type: disc; /* Display bullet points */
+  margin-left: 20px; /* Indent the list */
+}
+
+.bullet-list ul li {
+  margin-bottom: 0.5rem;
+}
+
+/*
+.Toastify__progress-bar {
+  background-color: #0f5288 !important; /* Example color: tomato */
+/* } */
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.auth-layout-background {
+  background-image: url("/authBackground.svg");
+  background-size: cover;
+}
+
+.layout-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  /* background-color: blue; */
+}
+
+.shadow_div {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arial-rounded {
+  font-family: "Arial Rounded MT Bold";
+}
+
+.arial-medium {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.switzer-semibold {
+  font-family: "Switzer Semi-Bold";
+}
+
+.mobile_nav {
+  transition: all 0.3s;
+}
+
+.layout-loader {
+  width: 75px;
+  height: 75px;
+  border: 6px solid #0f5288;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.33s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button-loader {
+  width: 22px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.primary-bg {
+  background-color: #0f5288;
+}
+
+.primary-text {
+  color: #0f5288;
+}
+
+.button-hover {
+  background-color: #1d80ac;
+}
+
+.secondary-text {
+  color: #333333;
+}
+
+.light-text {
+  color: #484848;
+}
+
+.active_link {
+  @apply w-60 h-14 bg-gray-100 text-custom-blue flex items-center justify-center relative;
+}
+.inactive_nav_links {
+  @apply w-60 h-14 flex items-center justify-center;
+}
+
+.inactive_nav_links:hover {
+  background-color: rgb(243 244 246);
+  color: #0f5288;
+}
+
+/* mobile styling */
+/* .active_link_mobile {
+  @apply w-60 h-14 bg-gray-100 text-custom-blue flex items-center justify-center relative;
+} */
+/* .inactive_nav_links_mobile {
+  @apply w-60 h-14 flex items-center justify-center;
+}
+.inactive_nav_links_mobile:hover {
+  background-color: rgb(243 244 246);
+  color: #0f5288;
+} */
+
+@media screen and (min-width: 768px) {
+  .active_link::before,
+  .active_link::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    right: 0;
+    background-color: #0f5288;
+    border-radius: 50%;
+  }
+
+  .active_link::before {
+    top: -16px;
+    border-radius: 0 0 12px 0;
+    box-shadow: 5px 5px 0 5px rgb(243 244 246);
+  }
+
+  .active_link::after {
+    bottom: -16px;
+    border-radius: 0 12px 0 0;
+    box-shadow: 5px -5px 0 5px rgb(243 244 246);
+  }
+}
+
+.active_link_border {
+  border-top-right-radius: -15px;
+  border-bottom-right-radius: -15px;
+}
+
+.zoom-out {
+  animation: zoomOut 0.2s ease-out;
+}
+.zoom-in {
+  animation: zoomIn 0.2s ease-out;
+}
+/* styles/globals.css */
+@keyframes zoomOut {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.grid-cols-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.tagInputFieldClass {
+  border: 2px solid #c7c7c7;
+  border-radius: 6px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.tagClass {
+  color: white;
+  margin-inline-start: 4px;
+  background-color: #c7c7c7;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.removeClass {
+  margin-left: 8px;
+}
+
+.about_image{
+  max-width: 100%;
+background-image: url("/aboutus/image.png");
+background-position: center;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}

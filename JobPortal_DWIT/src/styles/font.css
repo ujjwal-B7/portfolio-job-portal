@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Arial MT Medium";
+  src: url("/public/fonts/arial-mt/ARIALMTMEDIUM.TTF") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Arial Rounded MT Bold";
+  src: url("/public/fonts/ARLRDBD.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Arial Rounded MT";
+  src: url("/public/fonts/Aria-Rounded-MT-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/public/fonts/Switzer-Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Switzer Semi-Bold";
+  src: url("/public/fonts/Switzer-Semibold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
